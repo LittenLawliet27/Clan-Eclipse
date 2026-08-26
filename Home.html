@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Clan Eclipse | Home</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+
+        background:
+            radial-gradient(
+                circle at 50% 20%,
+                rgba(145, 45, 255, 0.35),
+                transparent 35%
+            ),
+            linear-gradient(
+                135deg,
+                #030305 0%,
+                #10051d 35%,
+                #26063f 60%,
+                #050507 100%
+            );
+
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       BACKGROUND
+    ========================= */
+
+    .background {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    .glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.35;
+    }
+
+    .glow.one {
+        width: 400px;
+        height: 400px;
+
+        background: #7e22ce;
+
+        top: -100px;
+        left: -100px;
+    }
+
+    .glow.two {
+        width: 350px;
+        height: 350px;
+
+        background: #a855f7;
+
+        right: -100px;
+        top: 35%;
+    }
+
+    .glow.three {
+        width: 450px;
+        height: 450px;
+
+        background: #4c1d95;
+
+        bottom: -200px;
+        left: 30%;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    header {
+        width: 100%;
+
+        padding: 25px 6%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+        z-index: 5;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-weight: bold;
+        letter-spacing: 4px;
+        font-size: 18px;
+    }
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 50%;
+
+        background: #050507;
+
+        border: 1px solid #a855f7;
+
+        box-shadow:
+            0 0 12px #7e22ce,
+            0 0 25px rgba(168, 85, 247, .4);
+    }
+
+    .status {
+        color: #bca8c9;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+    }
+
+    .status::before {
+        content: "●";
+
+        color: #a855f7;
+
+        margin-right: 8px;
+
+        text-shadow:
+            0 0 8px #a855f7;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 78vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 80px 20px 100px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 900px;
+    }
+
+    .eyebrow {
+        color: #b56cff;
+
+        font-size: 12px;
+
+        letter-spacing: 5px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(55px, 11vw, 125px);
+
+        letter-spacing: 15px;
+
+        line-height: 0.9;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ffffff,
+                #d8b4fe,
+                #9b4dff,
+                #ffffff
+            );
+
+        background-size: 200% auto;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: titleGradient 6s linear infinite;
+
+        text-shadow:
+            0 0 30px rgba(168, 85, 247, .25);
+    }
+
+    @keyframes titleGradient {
+        0% {
+            background-position: 0% center;
+        }
+
+        100% {
+            background-position: 200% center;
+        }
+    }
+
+    .hero-subtitle {
+        margin-top: 30px;
+
+        color: #d3c6dc;
+
+        font-size: clamp(15px, 2vw, 20px);
+
+        line-height: 1.7;
+    }
+
+    .hero-subtitle strong {
+        color: #c084fc;
+    }
+
+    .scroll-indicator {
+        margin-top: 55px;
+
+        color: #76657f;
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+    }
+
+    .scroll-indicator span {
+        display: block;
+
+        margin: 12px auto;
+
+        width: 1px;
+        height: 35px;
+
+        background:
+            linear-gradient(
+                #a855f7,
+                transparent
+            );
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values-section {
+        padding: 100px 6% 130px;
+
+        position: relative;
+    }
+
+    .section-heading {
+        text-align: center;
+
+        margin-bottom: 55px;
+    }
+
+    .section-heading .small {
+        color: #a855f7;
+
+        font-size: 11px;
+
+        letter-spacing: 5px;
+
+        text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+        margin-top: 12px;
+
+        font-size: clamp(32px, 5vw, 55px);
+
+        letter-spacing: 3px;
+    }
+
+    .section-heading p {
+        max-width: 650px;
+
+        margin: 20px auto 0;
+
+        color: #a99bb0;
+
+        line-height: 1.7;
+    }
+
+    .values {
+        max-width: 1150px;
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+    .value {
+        position: relative;
+
+        padding: 35px 30px;
+
+        min-height: 220px;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(168, 85, 247, .12),
+                rgba(0, 0, 0, .4)
+            );
+
+        border:
+            1px solid rgba(168, 85, 247, .2);
+
+        border-radius: 18px;
+
+        transition:
+            transform .25s ease,
+            border-color .25s ease,
+            box-shadow .25s ease;
+    }
+
+    .value:hover {
+        transform: translateY(-7px);
+
+        border-color:
+            rgba(168, 85, 247, .65);
+
+        box-shadow:
+            0 15px 45px rgba(91, 33, 182, .2);
+    }
+
+    .value-number {
+        color: #7e22ce;
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 25px;
+    }
+
+    .value h3 {
+        font-size: 22px;
+
+        margin-bottom: 12px;
+
+        color: #ffffff;
+    }
+
+    .value p {
+        color: #a99caf;
+
+        line-height: 1.7;
+
+        font-size: 14px;
+    }
+
+    /* =========================
+       CENTER STATEMENT
+    ========================= */
+
+    .statement {
+        max-width: 950px;
+
+        margin: 100px auto 0;
+
+        padding: 60px 40px;
+
+        text-align: center;
+
+        border-top:
+            1px solid rgba(168, 85, 247, .3);
+
+        border-bottom:
+            1px solid rgba(168, 85, 247, .3);
+    }
+
+    .statement p {
+        font-size: clamp(22px, 4vw, 38px);
+
+        line-height: 1.4;
+
+        font-weight: 600;
+
+        color: #eee7f2;
+    }
+
+    .statement span {
+        color: #a855f7;
+    }
+
+    /* =========================
+       FUTURE NAVIGATION AREA
+    ========================= */
+
+    .navigation-area {
+        max-width: 1100px;
+
+        margin: 0 auto;
+
+        min-height: 250px;
+
+        padding: 80px 20px;
+
+        text-align: center;
+    }
+
+    .navigation-area p {
+        color: #665a6d;
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        padding: 40px 20px;
+
+        text-align: center;
+
+        border-top:
+            1px solid rgba(168, 85, 247, .12);
+
+        color: #5d5264;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+        .values {
+            grid-template-columns: 1fr;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        .status {
+            display: none;
+        }
+
+        h1 {
+            letter-spacing: 8px;
+        }
+
+        .hero {
+            min-height: 70vh;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Background effects -->
+
+<div class="background">
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+    <div class="glow three"></div>
+</div>
+
+<!-- Header -->
+
+<header>
+
+    <div class="brand">
+        <div class="brand-mark"></div>
+        CLAN ECLIPSE
+    </div>
+
+    <div class="status">
+        Member Access
+    </div>
+
+</header>
+
+<!-- Introduction -->
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Welcome to the Eclipse
+            </div>
+
+            <h1>
+                ECLIPSE
+            </h1>
+
+            <p class="hero-subtitle">
+                A student-led community built around
+                <strong>unity, respect, individuality,</strong>
+                and making a positive difference.
+                <br><br>
+                Different people. Different stories.
+                <strong>One community.</strong>
+            </p>
+
+            <div class="scroll-indicator">
+                Discover what we stand for
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Core Values -->
+
+    <section class="values-section">
+
+        <div class="section-heading">
+
+            <div class="small">
+                What We Stand For
+            </div>
+
+            <h2>
+                Core Values
+            </h2>
+
+            <p>
+                Clan Eclipse isn't about being the biggest,
+                loudest, or most popular group.
+                It's about creating a community where people
+                can belong, contribute, and be themselves.
+            </p>
+
+        </div>
+
+        <div class="values">
+
+            <article class="value">
+
+                <div class="value-number">
+                    01 / UNITY
+                </div>
+
+                <h3>
+                    Together
+                </h3>
+
+                <p>
+                    We bring people together instead of
+                    dividing them. Everyone has something
+                    different to contribute to Eclipse.
+                </p>
+
+            </article>
+
+            <article class="value">
+
+                <div class="value-number">
+                    02 / RESPECT
+                </div>
+
+                <h3>
+                    Respect
+                </h3>
+
+                <p>
+                    Every member deserves to be treated
+                    with respect. We build each other up
+                    rather than tearing each other down.
+                </p>
+
+            </article>
+
+            <article class="value">
+
+                <div class="value-number">
+                    03 / INDIVIDUALITY
+                </div>
+
+                <h3>
+                    Be Yourself
+                </h3>
+
+                <p>
+                    You don't need to change who you are
+                    to belong here. Being different is
+                    part of what makes our community unique.
+                </p>
+
+            </article>
+
+            <article class="value">
+
+                <div class="value-number">
+                    04 / KINDNESS
+                </div>
+
+                <h3>
+                    Look Out For Others
+                </h3>
+
+                <p>
+                    A community is only as strong as the
+                    way its members treat one another.
+                    Kindness matters.
+                </p>
+
+            </article>
+
+            <article class="value">
+
+                <div class="value-number">
+                    05 / COMMUNITY
+                </div>
+
+                <h3>
+                    Build Together
+                </h3>
+
+                <p>
+                    We encourage collaboration, friendships,
+                    student projects, activities, and
+                    positive connections around school.
+                </p>
+
+            </article>
+
+            <article class="value">
+
+                <div class="value-number">
+                    06 / PURPOSE
+                </div>
+
+                <h3>
+                    Make a Difference
+                </h3>
+
+                <p>
+                    We're students, but that doesn't mean
+                    we can't make an impact. Small actions
+                    can make our school community better.
+                </p>
+
+            </article>
+
+        </div>
+
+        <!-- Main philosophy -->
+
+        <div class="statement">
+
+            <p>
+                You don't have to <span>fit in</span>
+                to find somewhere you <span>belong.</span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Reserved for future navigation -->
+
+    <section class="navigation-area">
+
+        <!--
+            FUTURE CLAN ECLIPSE NAVIGATION
+
+            Buttons linking to the different sections/
+            subdomains of the website will be added here.
+        -->
+
+        <p>
+            More of Eclipse is coming...
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    CLAN ECLIPSE • UNITY IN THE DARK • STUDENT COMMUNITY
+</footer>
+```
+
+</body>
+</html>
