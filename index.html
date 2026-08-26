@@ -387,14 +387,9 @@
                 input.disabled = true;
                 button.disabled = true;
 
-                /*
-                 * Redirect the visitor to Google.
-                 */
                 setTimeout(function() {
-
-                    window.location.href =
-                        "https://www.google.com/search?q=" +
-                        encodeURIComponent(SEARCH_TEXT);
+    window.location.href = "denied.html";
+}, 1000);
 
                 }, 1000);
             }
