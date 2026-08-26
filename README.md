@@ -1,4 +1,4 @@
-# 🌑 Clan Eclipse
+#  Clan Eclipse
 
 > **Bringing people together. Building a community. Making a difference.**
 
@@ -71,7 +71,7 @@ We're stronger when we work together.
 
 Clan Eclipse isn't about being better than everyone else.
 
-It's about **finding your people, creating something together, and making the most of the time we have as students.**
+It's about **finding your people, creating something together, and making the most of the time we have as students. ****
 
 We're misfits.
 
@@ -90,13 +90,13 @@ We're students.
 **Aaron Gonzalez**
 Also known as **Cherry Blossom / Ash Silver**
 
-> *"You don't have to fit in to belong somewhere."*
+> *"You miss the shot's you dont take"*
 
 ---
 
 ## 🌑 Want to Join?
 
-**You're invited.**
+**You're invited. ****
 
 If you want to be part of a student community focused on friendship, unity, creativity, and making a positive difference around school, **Clan Eclipse welcomes you.**
 
@@ -106,5 +106,5 @@ If you want to be part of a student community focused on friendship, unity, crea
 
 ---
 
-*Clan Eclipse is an independent student community. Participation in any school-related activity is subject to applicable school rules and policies.*
+*Clan Eclipse is an independent student community. Participation in any school-related activity is subject to applicable school rules and policies. we are not an offical school sanctioned group yet THO that is one of the goals for it*
 
