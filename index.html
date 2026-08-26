@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Clan Eclipse | Restricted Access</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background:
+            radial-gradient(
+                circle at center,
+                #351052 0%,
+                #16091f 35%,
+                #050507 75%
+            );
+
+        color: white;
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+    }
+
+    /* Eclipse glow */
+
+    .eclipse {
+        position: fixed;
+
+        width: 430px;
+        height: 430px;
+
+        border-radius: 50%;
+
+        background: #030304;
+
+        box-shadow:
+            0 0 25px #8b3dff,
+            0 0 70px #7027d8,
+            0 0 150px rgba(126, 34, 206, .45);
+
+        z-index: 0;
+    }
+
+    .eclipse::before {
+        content: "";
+
+        position: absolute;
+        inset: -12px;
+
+        border-radius: 50%;
+
+        border: 2px solid rgba(168, 85, 247, .55);
+
+        box-shadow:
+            0 0 25px #9333ea,
+            0 0 60px rgba(147, 51, 234, .5);
+    }
+
+    /* Main panel */
+
+    .panel {
+        position: relative;
+        z-index: 2;
+
+        width: min(90%, 500px);
+
+        padding: 45px 35px;
+
+        text-align: center;
+
+        background:
+            rgba(5, 5, 8, .88);
+
+        border:
+            1px solid rgba(168, 85, 247, .5);
+
+        border-radius: 22px;
+
+        backdrop-filter: blur(16px);
+
+        box-shadow:
+            0 0 35px rgba(124, 45, 255, .25);
+    }
+
+    .logo {
+        width: 105px;
+        height: 105px;
+
+        margin: 0 auto 20px;
+
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background:
+            radial-gradient(
+                circle,
+                #09070d 45%,
+                #000 46%
+            );
+
+        border: 2px solid #a855f7;
+
+        box-shadow:
+            0 0 20px #7e22ce,
+            0 0 50px rgba(168, 85, 247, .45);
+
+        font-size: 42px;
+    }
+
+    h1 {
+        font-size: 42px;
+
+        letter-spacing: 8px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #fff,
+                #d8b4fe,
+                #9333ea
+            );
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        margin-top: 8px;
+
+        color: #a99bb5;
+
+        font-size: 13px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+    }
+
+    .line {
+        width: 90px;
+        height: 2px;
+
+        margin: 25px auto;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                #a855f7,
+                transparent
+            );
+    }
+
+    .description {
+        color: #d4c8dc;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+    .access {
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    input {
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 10px;
+
+        border: 1px solid #5b21b6;
+
+        background: rgba(0, 0, 0, .6);
+
+        color: white;
+
+        outline: none;
+
+        text-align: center;
+
+        font-size: 15px;
+
+        letter-spacing: 2px;
+    }
+
+    input:focus {
+        border-color: #a855f7;
+
+        box-shadow:
+            0 0 15px rgba(168, 85, 247, .4);
+    }
+
+    button {
+        padding: 15px;
+
+        border: 0;
+
+        border-radius: 10px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #6d28d9,
+                #9333ea
+            );
+
+        color: white;
+
+        font-weight: bold;
+
+        letter-spacing: 2px;
+
+        cursor: pointer;
+
+        transition: .2s;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 0 20px rgba(168, 85, 247, .6);
+    }
+
+    button:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    .denied {
+        display: none;
+
+        margin-top: 15px;
+
+        color: #d8b4fe;
+
+        font-size: 13px;
+
+        letter-spacing: 1px;
+    }
+
+    footer {
+        margin-top: 25px;
+
+        color: #62576b;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    @media (max-width: 600px) {
+
+        .eclipse {
+            width: 300px;
+            height: 300px;
+        }
+
+        .panel {
+            padding: 35px 25px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="eclipse"></div>
+
+<main class="panel">
+
+    <div class="logo">
+        🌑
+    </div>
+
+    <h1>ECLIPSE</h1>
+
+    <div class="subtitle">
+        Clan Eclipse
+    </div>
+
+    <div class="line"></div>
+
+    <p class="description">
+        Welcome to the official Clan Eclipse website.
+        <br><br>
+        This area is restricted to Clan Eclipse members
+        and invited guests.
+        <br><br>
+        Enter your access code to continue.
+    </p>
+
+    <form class="access" id="accessForm">
+
+        <input
+            id="accessCode"
+            type="password"
+            placeholder="ACCESS CODE"
+            autocomplete="off"
+            required
+        >
+
+        <button id="enterButton" type="submit">
+            ENTER ECLIPSE
+        </button>
+
+    </form>
+
+    <div class="denied" id="denied">
+        ACCESS DENIED — REDIRECTING...
+    </div>
+
+    <footer>
+        CLAN ECLIPSE • UNITY IN THE DARK
+    </footer>
+
+</main>
+
+<script>
+
+    const ACCESS_CODE = "Voided";
+
+    const SEARCH_TEXT =
+        "You shouldn't break into Clan's you arent apart of";
+
+    document
+        .getElementById("accessForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const input =
+                document.getElementById("accessCode");
+
+            const button =
+                document.getElementById("enterButton");
+
+            const denied =
+                document.getElementById("denied");
+
+            if (input.value === ACCESS_CODE) {
+
+                /*
+                 * Successful access.
+                 *
+                 * GitHub Pages supports relative URLs,
+                 * so this works regardless of the repository name.
+                 */
+                window.location.href = "home.html";
+
+            } else {
+
+                denied.style.display = "block";
+
+                input.disabled = true;
+                button.disabled = true;
+
+                /*
+                 * Redirect the visitor to Google.
+                 */
+                setTimeout(function() {
+
+                    window.location.href =
+                        "https://www.google.com/search?q=" +
+                        encodeURIComponent(SEARCH_TEXT);
+
+                }, 1000);
+            }
+        });
+
+</script>
+```
+
+</body>
+</html>
